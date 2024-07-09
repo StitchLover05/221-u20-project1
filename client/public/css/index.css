@@ -12,6 +12,7 @@ body {
 }
 
 .menu_button {
+  background-image: url("paper.gif");
 	background-color: rgba(255, 0, 0, 0.5);
     font-size: 28px;
     color: white;
