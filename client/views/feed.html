@@ -1,12 +1,23 @@
 <!doctype html>
 <html>
   <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW:wght@100..400&display=swap');
+      </style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        </style>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="/css/global.css">
     <link rel="stylesheet" type="text/css" href="/css/feed.css">
     <title>FoxChatter Newsfeed</title>
-    <meta charset="utf-8"/>
-
   </head>
+  <style>
+    body { 
+       background-image: url("images/color.png");
+       background-color: #ffff; 
+    }
+  </style>
   <body>
     <header>
       <!--Site Name-->
@@ -14,7 +25,7 @@
       <!--MyMarist Portal-->
       <marquee direction="left"></marquee>
       <img src="images/redfox.png" width="50" height="50"></img> 
-      MyMarist
+      <h2><a class= 'myClass' href = "https://www.marist.edu/">myMarist</a> </h2>
       <div id="portal_button">
         
         
@@ -22,13 +33,13 @@
   
     </header>
     <main>
-      <div id = "newsfeed" > Feed will go here.</div>
+      <div id = "newsfeed" > Stream</div>
 
     </main>
     <footer>
       <p id="site_info">Copyright &copy; 2020: Marist College est. 1929</p>
     </footer>
-
-
+    <script src="/js/global.js"></script>
+    <script src="/js/feed.js"></script>
   </body>
 </html>

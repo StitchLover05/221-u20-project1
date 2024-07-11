@@ -1,16 +1,18 @@
 body {
-  background-image: url(campus.png);
-  background-color: #ffffff;
+  background-image: url(https://i.pinimg.com/474x/c7/d4/73/c7d473035f93a0923f7a8e499bcb3404.jpg);
+  background-color: #0f0e0e;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-	
+  font-family: "Playwrite AU NSW", cursive;
 }
+	
+
 
 #splash_title {
 	width: 100%;
   font-size: 100px;
-  color: red;
+  color: rgb(132, 88, 122);
   opacity: 0.85;
   text-shadow: 4px 4px 4px rgba(255, 255, 255);
   text-align: center;
@@ -18,12 +20,13 @@ body {
 
 .menu_button {
   background-image: url("paper.gif");
-	background-color: rgba(255, 0, 0, 0.5);
+	background-color: rgba(61, 70, 106, 0.5);
     font-size: 28px;
     color: white;
     cursor: pointer;
     text-align: center;
     user-select: none;
+    font-family: "Playwrite AU NSW", cursive;
 }
 
 .background_button {
