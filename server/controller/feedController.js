@@ -8,19 +8,21 @@ console.log(feedItems);
 let currentId = 1;
 
 
+
+
 exports.getAllFeedItems=(req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.send(feedItems);
-}
+};
 
 
 exports.createFeedItems=(req, res) => {
     const { title, body, linkUrl, imageUrl } = req.body;
-    const newFeedItem = new FeedItem(currentId++, title, body, linkUrl, imageUrl);
+    const newFeedItem = feedItem.createFeedItem(currentId++, title, body, linkUrl, imageUrl);
     feedItems.push(newFeedItem);
     res.setHeader('Content-Type', 'application/json');
     res.status(201).send(newFeedItem);
-}
+};
 
 
 exports.getFeedItemsById =(req, res)=> {
@@ -32,12 +34,12 @@ exports.getFeedItemsById =(req, res)=> {
     } else {
         res.status(404).send({ message: 'Feed item not found' });
     }
-}
+};
 
 
 exports.updateFeedItems = (req, res) => {
     const { id } = req.params;
-    const { title, body, linkUrl, imageUrl } = req.body;
+    const { title, body, linkUrl, imageUrl } = req.body || {};
     let feedItem = feedItems.find(item => item.id === parseInt(id));
     if (feedItem) {
         feedItem.title = title || feedItem.title;
@@ -49,7 +51,7 @@ exports.updateFeedItems = (req, res) => {
     } else {
         res.status(404).send({ message: 'Feed item not found' });
     }
-}
+};
 
 
 exports.deleteFeedItems = (req, res) => {
@@ -62,4 +64,4 @@ exports.deleteFeedItems = (req, res) => {
     } else {
         res.status(404).send({ message: 'Feed item not found' });
     }
-}
+};

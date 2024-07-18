@@ -5,13 +5,13 @@ const feedController = require('../controller/feedController');
 const router = express.Router();
 
 
-router.get('/feedItems', feedController.getAllFeedItems);
+router.route('/feedItem')
+    .get(feedController.getAllFeedItems)
+    .post(feedController.createFeedItems);
 
-
-router.post('/feed', feedController.createFeedItems);
-router.get('/feed/:id', feedController.getFeedItemsById);
-router.put('/feed/:id', feedController.updateFeedItems);
-router.delete('/feed/:id', feedController.deleteFeedItems);
-
+router.route('/feedItems/:id')
+    .get(feedController.getFeedItemsById)
+    .put(feedController.updateFeedItems)
+    .delete(feedController.deleteFeedItems);
 
 module.exports = router;
